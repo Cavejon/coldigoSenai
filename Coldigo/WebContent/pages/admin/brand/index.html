@@ -1,0 +1,40 @@
+<script src="../../js/brand.js"></script>
+<h2>Marcas</h2>
+<div class="listaRegistros">
+	<div class="cadastrar-marca">
+		<button type="button" onclick="COLDIGO.marca.toggleCadastro()">
+			<img src="../../imgs/plus-circle.svg" /> Adicionar nova marca
+		</button>
+
+		
+		<div class="confirmar-cadastro">
+			<input type="text" placeholder="Digite o nome da marca" />
+
+			<button type="button" onclick="COLDIGO.marca.fazerCadastro()">
+				<img src="../../imgs/check.svg" />
+			</button>
+			<button type="button" onclick="COLDIGO.marca.toggleCadastro()">
+				<img src="../../imgs/x.svg" />
+			</button>
+
+		</div>
+		<div class="pesquisar-marca">
+			<input id="input-pesquisar-marca" type="text" placeholder="Pesquisar marca:"/>
+			<button id="button-pesquisar-marca"><img src="../../imgs/magnifying-glass.svg" alt="Botão de pesquisar"/></button>
+		</div>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th colspan="2">Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+
+		</tbody>
+	</table>
+</div>
+<div id="modalEditarMarca"></div>
+<div id="modalMsg"></div>
+<div id="modalConfirmacaoExcluir"></div>

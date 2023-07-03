@@ -1,0 +1,373 @@
+/* Configuração geral do corpo da página */
+body {
+	margin: 0 auto;
+	font-family: "Century Gothic", sans-serif;
+	overflow-x:hidden;
+}
+
+/* Layout Geral */
+
+/* Cabeçalho */
+header {
+	height: 120px;
+	background-color: #008eb6;
+	position: sticky;
+	top: 0px;
+}
+
+header img {
+	float: left;
+	height: 100px;
+	width: 100px;
+	margin: 10px;
+}
+
+header h1 {
+	float: left;
+	margin: 30px 0 15px 30px;
+	font-size: 40px;
+	color: #ffffff;
+}
+
+/* Menu */
+nav {
+	clear: both;
+	width: 70%;
+	display: inline-block;
+	margin: 0px auto;
+}
+
+nav a {
+	color: white;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-align: center;
+}
+
+nav .opcao {
+	float: left;
+	width: 19%;
+	background-color: #005f89;
+	margin: 0 0.5%;
+	font-size: 16px;
+}
+
+nav .opcao:hover {
+	background-color: #83afd3;
+}
+
+/* Dropdown */
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+/* Conteúdo - Dropdown */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #005f89;
+	z-index: 1;
+	width: 100%;
+}
+
+/* Links - Dropdown */
+.dropdown-content a {
+	display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: #83afd3;
+}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+/* Seção */
+section {
+	clear: both;
+	min-height: 460px;
+	width: 100%;
+	margin-top: 0px;
+}
+
+/* Rodapé */
+footer {
+	background-color: #005f89;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+}
+
+/* Modais */
+#modalAviso {
+	display: none;
+}
+
+/* Layout CRUDs */
+
+/* Título da página */
+section h2, section h3 {
+	text-align: center;
+}
+
+/* Formulários */
+.frmInserir, .frmFiltrar {
+	margin: 0px auto;
+	margin-bottom: 10px;
+}
+
+.frmInserir {
+	width: 500px;
+}
+
+.frmFiltrar {
+	width: 350px;
+}
+
+.frmInserir label {
+	width: 200px;
+}
+
+.frmInserir input, .frmInserir textarea, .frmInserir select {
+	width: 300px;
+	padding: 2px 0;
+}
+
+.frmInserir textarea {
+	height: 100px;
+	resize: none;
+}
+
+.frmInserir button, .frmFiltrar button {
+	width: 100px;
+	margin: 0 1%;
+	background: #b1ccf5;
+	font-weight: bold;
+	font-size: 16px;
+	float: right;
+}
+
+.frmInserir .aviso {
+	background: #ff0000;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* Tabela de registros */
+.listaRegistros {
+	position: relative;
+	padding-top: 50px;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.listaRegistros table {
+	border: 1px solid #000;
+	border-collapse: collapse;
+	margin: 0 auto;
+	min-width: 50%;
+}
+
+.listaRegistros table th {
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	padding: 0 5px;
+	border: transparent;
+}
+
+.listaRegistros tr, .listaRegistros td, .listaRegistros th {
+	border: 1px solid #fff;
+	padding: 0px 5px;
+}
+
+.listaRegistros tr, .listaRegistros td {
+	font-size: 16px;
+}
+
+.listaRegistros tr:nth-child(even) {
+	background: #b1ccf5;
+}
+
+.listaRegistros tr:nth-child(odd) {
+	background: #83afd3;
+}
+
+.listaRegistros .acoes {
+	width: 70px;
+}
+
+.listaRegistros table img {
+	padding: 0 5px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.listaRegistros .botoes-acao {
+	border: none; display : flex;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+}
+
+.listaRegistros .cadastrar-marca {
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.listaRegistros .cadastrar-marca button {
+	padding: .5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	border: none;
+	border-radius: 99999px;
+	background: #83afd3;
+	cursor: pointer;
+	margin-bottom: 10px;
+	gap: .5rem;
+	
+}
+
+.listaRegistros .cadastrar-marca img {
+	width: 15px;
+}
+
+.listaRegistros .cadastrar-marca .confirmar-cadastro {
+	transition: 2s;
+	top:0;
+	left: -250px;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 99999px;
+	background: #83afd3;
+	padding: .5rem 1rem;
+	opacity: 0;
+}
+
+.listaRegistros .cadastrar-marca button:nth-child(1) {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 0;
+	transition: 2s;
+	left: 50%;
+	opacity: 1;
+}
+
+.listaRegistros .cadastrar-marca .confirmar-cadastro input {
+	border: none;
+	background: transparent;
+	offset: none;
+}
+
+.listaRegistros .cadastrar-marca .confirmar-cadastro button {
+	padding: .25rem;
+	background: transparent;
+	margin: 0;
+}
+
+/* Animação - Cadastrar marca */
+.listaRegistros .cadastrar-marca button:hover {
+	filter: brightness(.9);
+}
+
+.listaRegistros .cadastrar-marca .confirmar-cadastro button:hover {
+	filter: brightness(.9);
+}
+
+.listaRegistros .cadastrar-marca.active .confirmar-cadastro {
+	left: 50%;
+	opacity: 1;
+}
+
+.listaRegistros .cadastrar-marca.active button:nth-child(1) {
+	left: 150%;
+	opacity: 0;
+}
+
+.pesquisar-marca {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.pesquisar-marca #input-pesquisar-marca {
+	border: none;
+	background: #83afd3;
+	padding: .5rem 0 .5rem 1rem;
+	border-radius: 99999px 0 0 99999px;
+}
+
+.pesquisar-marca #button-pesquisar-marca {
+	margin: 0;
+	border-radius: 0 99999px 99999px 0;
+}
+
+/* Modais */
+#modalAviso, .modalEditar {
+	display: none;
+}
+
+
+/* Slider */
+.slider-content {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	position: relative;
+	width: 2.5rem;
+}
+
+.slider-content input {
+	visibility: hidden;
+}
+
+.slider-content input::after,
+.slider-content input::before {
+	visibility: visible;
+	content: "";
+	position: absolute;
+	border-radius: 999999px;
+	padding: .3rem;
+	cursor: pointer;
+	transform: translate(-50%,-50%);
+	top: 50%;
+	left: 50%;
+	transition: .3s;
+	z-index: 2;
+}
+
+.slider-content input::after {
+	width: 15px;
+	height: 5px;
+	border: 2px solid #fff;
+	background: #c4c4c4;
+	z-index: 1;
+}
+
+.slider-content input::before {
+	background: #fff;
+	left: 40%;	
+}
+
+.slider-content input:checked::after {
+	background: #2ba2fd;
+}
+
+.slider-content input:checked::before {
+	left: 60%;
+}
